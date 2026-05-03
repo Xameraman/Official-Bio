@@ -1,5 +1,5 @@
 <html>
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -45,7 +45,7 @@ body{
   align-items:center;
 }
 
-/* ── HEADER (centered on all screens) ── */
+/* ── HEADER (centered) ── */
 .header{
   text-align:center;margin-bottom:18px;
   animation:fadeDown .6s ease both;
@@ -97,7 +97,7 @@ body{
 /* ── LINK LIST ── */
 .links{width:100%;display:flex;flex-direction:column;gap:6px;}
 
-/* ── MIA SERVER BOX (large card containing invite + Guides button) ── */
+/* ── MIA SERVER BOX ── */
 .mia-server-box{
   width:100%;max-width:520px;
   background:linear-gradient(135deg, rgba(88,101,242,.18), rgba(88,101,242,.05));
@@ -134,25 +134,25 @@ body{
 }
 .server-top:hover .server-arrow{color:#fff;transform:translateX(4px);}
 
-/* ── GUIDES BUTTON INSIDE MIA SERVER BOX ── */
+/* ── GUIDES BUTTON (SMALLER) ── */
 .guides-btn{
-  display:flex;align-items:center;justify-content:center;gap:8px;
+  display:flex;align-items:center;justify-content:center;gap:6px;
   background:linear-gradient(135deg, var(--accent), #FFA500);
   border:2px solid #FF8C00;
-  border-radius:10px;padding:12px 18px;
+  border-radius:8px;padding:8px 14px;
   text-decoration:none;
-  color:#000;font-weight:900;font-size:14px;
-  box-shadow:0 0 16px rgba(255,215,0,.35);
+  color:#000;font-weight:900;font-size:12px;
+  box-shadow:0 0 12px rgba(255,215,0,.35);
   transition:transform .2s,box-shadow .2s;
-  letter-spacing:1px;
+  letter-spacing:0.5px;
 }
 .guides-btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 0 28px rgba(255,215,0,.6);
+  transform:translateY(-2px);
+  box-shadow:0 0 22px rgba(255,215,0,.6);
 }
-.guides-btn span{font-size:20px;}
+.guides-btn span{font-size:18px;}
 
-/* ── BIO CARD (for YT + Partnerships) ── */
+/* ── BIO CARD ── */
 .bio-card{
   display:flex;align-items:center;gap:10px;
   text-decoration:none;border-radius:10px;
@@ -238,7 +238,8 @@ body{
   .server-logo{width:38px;height:38px;}
   .server-name{font-size:12px;}
   .server-desc{font-size:9.5px;}
-  .guides-btn{font-size:13px;padding:10px 14px;}
+  .guides-btn{font-size:11px;padding:7px 12px;}
+  .guides-btn span{font-size:16px;}
   .bio-card{padding:8px 10px;gap:8px;}
   .bio-name{font-size:12px;}
   .bio-desc{font-size:9.5px;}
@@ -285,7 +286,7 @@ body{
       </div>
       <span class="server-arrow">›</span>
     </a>
-    <!-- Yellow Guides button inside the same box -->
+    <!-- Yellow Guides button – SMALLER – UPDATE the href to your full guides site URL -->
     <a href="guides.html" class="guides-btn">
       <span>📚</span> GUIDES
     </a>
