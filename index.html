@@ -45,7 +45,7 @@ body{
   align-items:center;
 }
 
-/* ── HEADER (centered) ── */
+/* ── HEADER (centered on all screens) ── */
 .header{
   text-align:center;margin-bottom:18px;
   animation:fadeDown .6s ease both;
@@ -97,7 +97,7 @@ body{
 /* ── LINK LIST ── */
 .links{width:100%;display:flex;flex-direction:column;gap:6px;}
 
-/* ── MIA SERVER BOX ── */
+/* ── MIA SERVER BOX (large card containing invite + Guides button) ── */
 .mia-server-box{
   width:100%;max-width:520px;
   background:linear-gradient(135deg, rgba(88,101,242,.18), rgba(88,101,242,.05));
@@ -134,7 +134,7 @@ body{
 }
 .server-top:hover .server-arrow{color:#fff;transform:translateX(4px);}
 
-/* ── GUIDES BUTTON (SMALLER) ── */
+/* ── GUIDES BUTTON INSIDE MIA SERVER BOX (smaller) ── */
 .guides-btn{
   display:flex;align-items:center;justify-content:center;gap:6px;
   background:linear-gradient(135deg, var(--accent), #FFA500);
@@ -142,17 +142,18 @@ body{
   border-radius:8px;padding:8px 14px;
   text-decoration:none;
   color:#000;font-weight:900;font-size:12px;
-  box-shadow:0 0 12px rgba(255,215,0,.35);
+  box-shadow:0 0 14px rgba(255,215,0,.35);
   transition:transform .2s,box-shadow .2s;
-  letter-spacing:0.5px;
+  letter-spacing:1px;
+  align-self:center;
 }
 .guides-btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 0 22px rgba(255,215,0,.6);
+  box-shadow:0 0 24px rgba(255,215,0,.6);
 }
-.guides-btn span{font-size:18px;}
+.guides-btn span{font-size:16px;}
 
-/* ── BIO CARD ── */
+/* ── BIO CARD (for YT + Partnerships) ── */
 .bio-card{
   display:flex;align-items:center;gap:10px;
   text-decoration:none;border-radius:10px;
@@ -239,7 +240,7 @@ body{
   .server-name{font-size:12px;}
   .server-desc{font-size:9.5px;}
   .guides-btn{font-size:11px;padding:7px 12px;}
-  .guides-btn span{font-size:16px;}
+  .guides-btn span{font-size:14px;}
   .bio-card{padding:8px 10px;gap:8px;}
   .bio-name{font-size:12px;}
   .bio-desc{font-size:9.5px;}
@@ -286,8 +287,8 @@ body{
       </div>
       <span class="server-arrow">›</span>
     </a>
-    <!-- Yellow Guides button – SMALLER – UPDATE the href to your full guides site URL -->
-    <a href="guides.html" class="guides-btn">
+    <!-- Guides button (smaller, links to All-Mia-Guides) -->
+    <a href="https://xameraman.github.io/All-Mia-Guides/" class="guides-btn">
       <span>📚</span> GUIDES
     </a>
   </div>
