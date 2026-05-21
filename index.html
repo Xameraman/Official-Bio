@@ -922,5 +922,56 @@ body{
   function setLoading(s){isLoading=s;input.disabled=s;sendBtn.disabled=s;}
 })();
 </script>
+<!-- Discord Live Widget (icon + left-of-center) -->
+<script>
+(async function() {
+  try {
+    const res = await fetch('https://discord.com/api/guilds/1402293305785581721/widget.json');
+    if (!res.ok) return;
+    const data = await res.json();
+    const count = data.presence_count;
+
+    const badge = document.createElement('a');
+    badge.href = 'https://discord.gg/tS5WmGEyxN';
+    badge.target = '_blank';
+    badge.rel = 'noopener';
+    badge.style.cssText = `
+      position:fixed; bottom:18px; left:50%; z-index:99998;
+      background:linear-gradient(135deg,#5865F2,#4752C4); color:#fff;
+      padding:6px 12px; border-radius:20px; font-size:11px;
+      font-family:'Nunito',sans-serif; font-weight:700;
+      box-shadow:0 3px 10px rgba(88,101,242,0.45);
+      text-decoration:none; display:flex; align-items:center; gap:6px;
+      transition:transform .2s, box-shadow .2s;
+      cursor:pointer;
+      transform:translateX(-60%);
+      white-space:nowrap;
+    `;
+
+    // MIA icon (using the same image as the page – change if needed)
+    const icon = document.createElement('img');
+    icon.src = 'mia-icon.png'; // or mia-logo.jpg – use what's in your page
+    icon.style.cssText = `
+      width:18px; height:18px; border-radius:4px;
+      object-fit:cover; flex-shrink:0;
+      box-shadow:0 0 4px rgba(255,255,255,0.3);
+    `;
+
+    badge.appendChild(icon);
+    badge.appendChild(document.createTextNode(`🟢 ${count} online · Press to join MIA`));
+
+    badge.onmouseover = ()=> {
+      badge.style.transform = 'translateX(-60%) scale(1.05)';
+      badge.style.boxShadow = '0 5px 16px rgba(88,101,242,0.7)';
+    };
+    badge.onmouseout  = ()=> {
+      badge.style.transform = 'translateX(-60%) scale(1)';
+      badge.style.boxShadow = '0 3px 10px rgba(88,101,242,0.45)';
+    };
+
+    document.body.appendChild(badge);
+  } catch(e) { /* silently ignore */ }
+})();
+</script>
 </body>
 </html>
